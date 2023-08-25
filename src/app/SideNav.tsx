@@ -21,6 +21,7 @@ const SideNav = () => {
     <div className="p-[1px] lg:px-2 lg:w-[160px]">
       {MenuItems.map((item) => (
         <div
+          key={item.pathname + item.text}
           className={`flex flex-col lg:flex-row gap-1 p-2 items-center lg:gap-3 hover:bg-zinc-600 rounded-lg ${
             item.pathname === pathname && "bg-zinc-600 hover:bg-zinc-500"
           }`}
